@@ -125,8 +125,24 @@ export default function App() {
           />
         </div>
 
-        <footer className="mt-10 text-xs text-neutral-500">
-          © {new Date().getFullYear()} Instant Quote Calculator
+        <footer className="mt-16 border-t border-neutral-200 pt-6 text-sm text-neutral-500">
+          <div className="flex flex-col gap-1">
+            <div>
+              Built by <span className="font-medium text-neutral-700">Service Tools Studio</span>
+            </div>
+            <div>
+              Interested in using this for your business?{" "}
+              <a
+                href="mailto:service.tools.studio@gmail.com"
+                className="underline underline-offset-2 hover:text-neutral-700"
+              >
+                Get in touch 💌
+              </a>
+              <div>
+                <small><i>Branding is fully customizable (logo, colors, copy).</i></small>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
