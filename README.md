@@ -1,16 +1,47 @@
-# React + Vite
+# Instant Quote Calculator (Lead Capture Demo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, polished **instant estimate + lead capture** tool for cleaning businesses (or any service business with simple pricing rules).
 
-Currently, two official plugins are available:
+This repo contains a Vite + React + Tailwind UI that:
+- Calculates an instant estimate range from “Home details”
+- Collects contact info (“Where should we send your estimate?”)
+- Submits the lead to a Google Sheet via a Google Apps Script Web App
+- Sends confirmation emails (business owner + lead)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Status:** MVP shipped ✅  
+> **Built by:** Service Tools Studio
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Instant estimate** updates live as the user changes inputs
+- **Lead capture** form submission posts to a Google Apps Script endpoint
+- **Google Sheets logging** (one row per lead)
+- **Email notifications**
+  - business owner notification
+  - lead confirmation email
+- **Basic bot protection**
+  - honeypot field
+  - simple email/phone sanity checks
+- **UX polish**
+  - success message renders after the form
+  - smooth scroll to the success message on submit
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- Vite
+- React
+- Tailwind CSS
+- Google Apps Script Web App
+- Google Sheets (as lead database)
+
+---
+
+## Local Setup
+
+```bash
+npm install
+npm run dev
